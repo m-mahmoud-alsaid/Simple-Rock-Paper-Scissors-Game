@@ -7,16 +7,15 @@ let drawCounter = 0;
 let matches;
 let tbody = document.getElementsByTagName('tbody')[0];
 let resetButton = document.getElementById("reset");
+let wCounter = document.getElementById('win-counter');
+let lCounter = document.getElementById('lose-counter');
+let dCounter = document.getElementById('draw-counter');
 
 // Functions Section
 function showWinLoseDraw() {
-    let wCounter = document.getElementById('win-counter');
-    let lCounter = document.getElementById('lose-counter');
-    let dCounter = document.getElementById('draw-counter');
-
-    wCounter.textContent = winCounter;
-    lCounter.textContent = loseCounter;
-    dCounter.textContent = drawCounter;
+    wCounter.innerHTML = winCounter;
+    lCounter.innerHTML = loseCounter;
+    dCounter.innerHTML = drawCounter;
 }
 
 function checkWinner(userChoice, compChoice) {
@@ -110,6 +109,9 @@ function showResults() {
 window.onload = showResults;
 
 resetButton.onclick = () => {
+    wCounter.innerHTML = 0;
+    lCounter.innerHTML = 0;
+    dCounter.innerHTML = 0;
     localStorage.clear();
     tbody.innerHTML = '';
 };

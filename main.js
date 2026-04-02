@@ -6,6 +6,7 @@ let loseCounter = 0;
 let drawCounter = 0;
 let matches;
 let tbody = document.getElementsByTagName('tbody')[0];
+let resetButton = document.getElementById("reset");
 
 // Functions Section
 function showWinLoseDraw() {
@@ -107,6 +108,11 @@ function showResults() {
 
 // Events Section  
 window.onload = showResults;
+
+resetButton.onclick = () => {
+    localStorage.clear();
+    tbody.innerHTML = '';
+};
 
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('choice')) {

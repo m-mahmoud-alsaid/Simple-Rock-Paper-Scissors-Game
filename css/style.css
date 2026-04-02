@@ -230,4 +230,28 @@ body {
     border-radius: 0 10px 10px 0;
 }
 
+.reset-box {
+    background-color: var(--bg-secondary);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.reset {
+    padding: 20px 50px;
+    background-color: var(--lose-color);
+    color: var(--text-light);
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 10px;
+    border-width: 0;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+.reset:hover {
+    transform: translateY(-10px);
+}
+
 /* End Game Section */

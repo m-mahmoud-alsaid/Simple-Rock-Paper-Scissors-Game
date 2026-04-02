@@ -1,0 +1,233 @@
+/* Start Global Variables  */
+:root {
+    --primary-dark: #1E3A8A;
+    --primary: #3B82F6;
+    --primary-light: #60A5FA;
+
+    --bg-main: #F8FAFC;
+    --bg-secondary: #E2E8F0;
+    --bg-highlight: #CBD5F5;
+
+    --text-main: #0F172A;
+    --text-secondary: #475569;
+    --text-light: #FFFFFF;
+
+    --rock-color: #64748B;
+    --paper-color: #2563EB;
+    --scissors-color: #DC2626;
+
+    --win-color: #16A34A;
+    --lose-color: #DC2626;
+    --draw-color: #EAB308;
+
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.2);
+}
+
+/* End Global Variables  */
+/* Start Customize Responsive  */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End Customize Responsive  */
+/* Start Rules  */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    text-transform: capitalize;
+    color: var(--text-main);
+    background-color: var(--bg-main);
+}
+
+/* End Rules  */
+.main-title {
+    color: var(--text-main);
+    margin: 30px auto;
+    width: fit-content;
+}
+
+/* Start Game Section */
+.game-section {
+    display: flex;
+    justify-content: center;
+}
+
+.game-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.game-section .container .options {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+}
+
+.game-section .container .options .rock,
+.game-section .container .options .paper,
+.game-section .container .options .scissors {
+    padding: 15px 25px;
+    font-size: 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.game-section .container .options .rock {
+    color: var(--rock-color);
+}
+
+.game-section .container .options .paper {
+    color: var(--paper-color);
+}
+
+.game-section .container .options .scissors {
+    color: var(--scissors-color);
+}
+
+.game-section .container .options .rock:hover,
+.game-section .container .options .paper:hover,
+.game-section .container .options .scissors:hover {
+    transform: translateY(-10px);
+}
+
+.user-vs-computer {
+    display: flex;
+    flex-basis: 100%;
+    gap: 10px;
+}
+
+.user-vs-computer .user,
+.user-vs-computer .computer {
+    background-color: var(--bg-secondary);
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    flex-basis: 50%;
+    border-radius: 10px;
+}
+
+.user-vs-computer .computer {
+    position: relative;
+}
+
+.user-vs-computer .computer i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: var(--rock-color);
+}
+
+.user-vs-computer img {
+    width: 150px;
+}
+
+@media (max-width: 767px) {
+    .user-vs-computer {
+        flex-direction: column;
+    }
+
+    .user-vs-computer .computer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .user-vs-computer .computer i {
+        position: static;
+        transform: translateY(0);
+    }
+}
+
+.history {
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+}
+
+.history .table-title {
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.history .history-table {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.history .history-table thead {
+    background-color: #64748b38;
+}
+
+.history .history-table thead th {
+    padding: 10px;
+    color: var(--text-main);
+}
+
+.history .history-table td {
+    padding-top: 10px;
+    padding-left: 10px;
+    color: var(--text-secondary);
+}
+
+.history .history-table tr td:first-of-type {
+    text-align: center;
+    padding: 0;
+}
+
+.win-lose-draw {
+    display: flex;
+}
+
+.win-lose-draw .win,
+.win-lose-draw .lose,
+.win-lose-draw .draw {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: calc(100% / 3);
+    padding: 20px;
+    font-size: 20px;
+    color: var(--text-light);
+}
+
+.win-lose-draw .win {
+    background-color: var(--win-color);
+    border-radius: 10px 0 0 10px;
+}
+
+.win-lose-draw .lose {
+    background-color: var(--lose-color);
+}
+
+.win-lose-draw .draw {
+    background-color: var(--draw-color);
+    border-radius: 0 10px 10px 0;
+}
+
+/* End Game Section */

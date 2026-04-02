@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Changa+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+</head>
+
+<body>
+    <h1 id="main-title" class="main-title">rock paper scissors game</h1>
+    <div id="game-section" class="game-section">
+        <div id="container" class="container">
+            <div id="options" class="options">
+                <i class="fa-solid fa-hand-back-fist rock choice"></i>
+                <i class="fa-solid fa-hand paper choice"></i>
+                <i class="fa-solid fa-hand-scissors scissors choice"></i>
+            </div>
+            <div id="user-vs-computer" class="user-vs-computer">
+                <div id="user" class="user">
+                    <p id="user-txt" class="user-txt">you</p>
+                    <div id="user-img">
+                        <img src="imgs/Rock-Paper-Scissors.png" alt="image">
+                    </div>
+                </div>
+                <div id="computer" class="computer">
+                    <p id="computer-txt" class="computer-txt">computer</p>
+                    <div id="computer-i">
+                        <i id="shuffle" class="fa-solid fa-shuffle"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="history" class="history">
+                <p id="table-title" class="table-title">match history</p>
+                <table id="history-table" class="history-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>your choice</th>
+                            <th>computer's choice</th>
+                            <th>result</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="win-lose-draw" class="win-lose-draw">
+                <p id="win" class="win"><span>wins</span><span id="win-counter">0</span></p>
+                <p id="lose" class="lose"><span>lose</span><span id="lose-counter">0</span></p>
+                <p id="draw" class="draw"><span>draw</span><span id="draw-counter">0</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
